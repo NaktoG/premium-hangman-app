@@ -21,7 +21,6 @@ export const es = {
     topLabel: 'TOP 10',
   },
   footer: {
-    copyright: 'Construido con React, TypeScript y arquitectura profesional.',
     githubIconLabel: 'Icono de GitHub',
     githubLink: 'Ver repositorio en GitHub',
   },
