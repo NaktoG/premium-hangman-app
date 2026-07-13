@@ -10,6 +10,24 @@ Production URL:
 https://premium-hangman-app.netlify.app
 ```
 
+Current status: Netlify rejected the latest production deploy because the account exceeded available credits. The site remains configured, but new deploys require resolving the Netlify account limit.
+
+## GitHub Pages
+
+Active updated preview:
+
+```txt
+https://naktog.github.io/premium-hangman-app/
+```
+
+Manual static deployment:
+
+```bash
+npm run build -- --base=/premium-hangman-app/
+```
+
+The generated `dist` output is published to the `gh-pages` branch.
+
 Configuración:
 
 ```txt

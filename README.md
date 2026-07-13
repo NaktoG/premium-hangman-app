@@ -10,7 +10,7 @@
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vite.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify&logoColor=white)](https://premium-hangman-app.netlify.app)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222?logo=github&logoColor=white)](https://naktog.github.io/premium-hangman-app/)
 
 </div>
 
@@ -40,7 +40,9 @@ Ofrecer una experiencia de juego cuidada en español e inglés, con pantalla ini
 
 ## Demo
 
-**Producción:** [premium-hangman-app.netlify.app](https://premium-hangman-app.netlify.app)
+**Preview actualizado:** [naktog.github.io/premium-hangman-app](https://naktog.github.io/premium-hangman-app/)
+
+**Netlify:** [premium-hangman-app.netlify.app](https://premium-hangman-app.netlify.app)
 
 ## Stack tecnológico
 
@@ -112,6 +114,14 @@ Producción:
 
 ```txt
 https://premium-hangman-app.netlify.app
+```
+
+Nota: la cuenta Netlify actual bloqueó nuevos deploys por créditos excedidos. La versión actualizada se publica también en GitHub Pages.
+
+## Deploy En GitHub Pages
+
+```txt
+https://naktog.github.io/premium-hangman-app/
 ```
 
 Configuración recomendada:
