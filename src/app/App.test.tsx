@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import i18next from 'i18next';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { App } from '@app/App';
 import { I18nProvider } from '@app/providers/I18nProvider';
 
@@ -13,11 +14,16 @@ function renderApp() {
 }
 
 describe('App', () => {
-  it('renders the premium game shell', () => {
+  beforeEach(async () => {
+    window.localStorage.clear();
+    await i18next.changeLanguage('es');
+  });
+
+  it('renders the premium start screen', () => {
     renderApp();
 
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
-    expect(screen.getByRole('group', { name: /tablero de letras/i })).toBeInTheDocument();
+    expect(screen.getByRole('textbox', { name: /nickname/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /ver repositorio en github/i })).toHaveAttribute(
       'href',
       'https://github.com/NaktoG/premium-hangman-app',
@@ -30,13 +36,18 @@ describe('App', () => {
 
     await user.click(screen.getByRole('button', { name: /cambiar a inglés/i }));
 
-    expect(screen.getByText(/premium game/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /enter the challenge/i })).toBeInTheDocument();
   });
 
-  it('accepts a correct first letter', async () => {
+  it('starts the game after entering a nickname', async () => {
     vi.spyOn(Math, 'random').mockReturnValue(0);
     const user = userEvent.setup();
     renderApp();
+
+    await user.type(screen.getByRole('textbox', { name: /nickname/i }), 'Player One');
+    await user.click(screen.getByRole('button', { name: /start game/i }));
+
+    expect(screen.getByRole('group', { name: /tablero de letras|letter board/i })).toBeInTheDocument();
 
     const firstInput = screen.getByLabelText(/letter 1|letra 1/i);
     await user.type(firstInput, 'j');

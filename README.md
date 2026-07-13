@@ -1,22 +1,70 @@
+<div align="center">
+
 # Premium Hangman App
+
+### Juego competitivo del ahorcado con ranking local
+
+**Repositorio:** [github.com/NaktoG/premium-hangman-app](https://github.com/NaktoG/premium-hangman-app)
+
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=111)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vite.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify&logoColor=white)](https://premium-hangman-app.netlify.app)
+
+</div>
+
+---
+
+## Descripción
 
 Juego del ahorcado premium, responsive y bilingüe construido con React, Vite y TypeScript. El proyecto reemplaza una implementación Angular inicial por una arquitectura frontend moderna, testeable y preparada para despliegue estático en Netlify.
 
 ## Objetivo
 
-Ofrecer una experiencia de juego cuidada en español e inglés, con arquitectura profesional, accesibilidad, tests automatizados y documentación operativa.
+Ofrecer una experiencia de juego cuidada en español e inglés, con pantalla inicial, registro simple por nickname, ranking local de mejores tiempos, accesibilidad, tests automatizados y documentación operativa.
 
-## Stack
+## Características
 
-- React 18
-- Vite
-- TypeScript estricto
-- Tailwind CSS
-- i18next / react-i18next
-- Vitest + Testing Library
-- Playwright
-- GitHub Actions
-- Netlify
+| Funcionalidad | Descripción |
+|---|---|
+| **Pantalla de inicio** | Landing interna con CTA para iniciar partida |
+| **Registro simple** | Nickname local, sin backend ni coste operativo |
+| **Ranking local** | Mejores tiempos guardados en `localStorage` |
+| **Temporizador competitivo** | Medición de tiempo para ordenar ganadores |
+| **Ayuda automática** | Revela letras con intervalo configurable |
+| **Internacionalización** | Español e inglés con `i18next` |
+| **Diseño premium** | Dark UI, glassmorphism controlado y layout responsive |
+| **Accesibilidad** | Labels, foco visible, semántica y navegación por teclado |
+| **Testing** | Tests unitarios/UI con Vitest y E2E con Playwright |
+
+## Demo
+
+**Producción:** [premium-hangman-app.netlify.app](https://premium-hangman-app.netlify.app)
+
+## Stack tecnológico
+
+| Capa | Tecnología |
+|---|---|
+| UI | React 18 |
+| Build | Vite 6 |
+| Lenguaje | TypeScript estricto |
+| Estilos | Tailwind CSS |
+| i18n | i18next / react-i18next |
+| Tests unitarios/UI | Vitest + Testing Library |
+| Tests E2E | Playwright |
+| Deploy | Netlify |
+
+## Persistencia local
+
+El ranking y nickname son client-side. Los datos se guardan en `localStorage` del navegador.
+
+Limitaciones conocidas:
+
+- El ranking existe solo en el navegador/dispositivo actual.
+- Si se limpian los datos del sitio, el ranking se pierde.
+- No hay sincronización entre usuarios reales ni dispositivos.
+- Para ranking global real se necesitaría backend y base de datos.
 
 ## Requisitos
 
@@ -51,7 +99,7 @@ npm run e2e
 ```txt
 src/
   app/                    # Shell de aplicación y providers
-  features/hangman/       # Feature principal con dominio, UI, hook e i18n
+  features/hangman/       # Dominio, UI, hook, ranking, storage e i18n
   shared/                 # Componentes reutilizables
   test/                   # Configuración de testing
 docs/                     # Arquitectura, ADRs, diagramas y guías

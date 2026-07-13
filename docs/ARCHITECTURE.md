@@ -24,6 +24,8 @@ app -> features -> shared
 
 `features/hangman/components` contiene UI específica de la feature.
 
+`features/hangman/storage` encapsula persistencia local de ranking.
+
 `shared/components` contiene primitivas reutilizables.
 
 ## Reglas De Dependencia
@@ -33,6 +35,7 @@ app -> features -> shared
 - `shared` no depende de `features`.
 - Los textos visibles se obtienen mediante i18n.
 - La configuración vive en `config`, no dentro de JSX.
+- La persistencia local se encapsula fuera de componentes.
 
 ## Patrones Aplicados
 
@@ -41,3 +44,9 @@ app -> features -> shared
 - Factory: `createInitialGameState` centraliza el estado inicial.
 - State Pattern ligero: el juego se gobierna por `playing`, `won` y `lost`.
 - Single Source of Truth: el estado del juego vive en un único objeto.
+
+## Ranking Local
+
+El ranking se guarda en `localStorage` para mantener coste cero y despliegue estático. La lógica de ordenamiento vive en `domain/leaderboard.ts`, mientras que la lectura/escritura del navegador vive en `storage/leaderboardStorage.ts`.
+
+Esta decisión evita introducir backend prematuramente, pero implica que los resultados no son globales ni compartidos entre dispositivos.

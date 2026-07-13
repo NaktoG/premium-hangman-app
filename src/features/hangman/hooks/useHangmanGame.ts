@@ -3,11 +3,15 @@ import { HANGMAN_CONFIG } from '@features/hangman/config/hangman.config';
 import { createInitialGameState } from '@features/hangman/domain/createInitialGameState';
 import { applyGuess, buildVisibleLetters, revealRandomLetter } from '@features/hangman/domain/gameRules';
 
-export function useHangmanGame() {
+type UseHangmanGameOptions = {
+  enabled?: boolean;
+};
+
+export function useHangmanGame({ enabled = true }: UseHangmanGameOptions = {}) {
   const [state, setState] = useState(() => createInitialGameState());
 
   useEffect(() => {
-    if (state.status !== 'playing') {
+    if (!enabled || state.status !== 'playing') {
       return undefined;
     }
 
@@ -18,15 +22,19 @@ export function useHangmanGame() {
         }
 
         if (currentState.remainingHelpSeconds > 1) {
-          return { ...currentState, remainingHelpSeconds: currentState.remainingHelpSeconds - 1 };
+          return {
+            ...currentState,
+            elapsedSeconds: currentState.elapsedSeconds + 1,
+            remainingHelpSeconds: currentState.remainingHelpSeconds - 1,
+          };
         }
 
-        return revealRandomLetter(currentState);
+        return revealRandomLetter({ ...currentState, elapsedSeconds: currentState.elapsedSeconds + 1 });
       });
     }, 1000);
 
     return () => window.clearInterval(timerId);
-  }, [state.status]);
+  }, [enabled, state.status]);
 
   const visibleLetters = useMemo(() => buildVisibleLetters(state), [state]);
 
@@ -42,6 +50,7 @@ export function useHangmanGame() {
     originalWord: state.originalWord,
     status: state.status,
     failedLetters: state.failedLetters,
+    elapsedSeconds: state.elapsedSeconds,
     errorCount: state.failedLetters.length,
     maxErrors: HANGMAN_CONFIG.maxErrors,
     remainingHelpSeconds: state.remainingHelpSeconds,

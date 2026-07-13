@@ -10,4 +10,6 @@ flowchart LR
   Components --> Shared[Shared Accessible Components]
   Components --> I18n[i18n Resources]
   Domain --> Data[Words Data]
+  Components --> Storage[Leaderboard Storage]
+  Storage --> Browser[localStorage]
 ```

@@ -2,7 +2,23 @@ export const en = {
   app: {
     eyebrow: 'Premium game',
     title: 'Guess the name before the final stroke drops',
-    description: 'A modern, responsive and accessible version of classic hangman, built with professional architecture.',
+    description: 'Register your nickname, solve the name as fast as possible and compete for the local ranking.',
+  },
+  start: {
+    eyebrow: 'Competitive mode',
+    title: 'Enter the challenge and set your best time',
+    description: 'Every win saves your time on this device ranking. The faster you solve it, the higher you climb.',
+    nicknameLabel: 'Nickname',
+    nicknamePlaceholder: 'E.g. Nakto',
+    nicknameHelp: 'Use between {{min}} and {{max}} characters.',
+    nicknameError: 'Enter a valid nickname to start.',
+    startButton: 'Start game',
+  },
+  leaderboard: {
+    empty: 'No completed games yet. Be the first player to enter the ranking.',
+    eyebrow: 'Local ranking',
+    title: 'Best times',
+    topLabel: 'TOP 10',
   },
   footer: {
     copyright: 'Built with React, TypeScript and professional architecture.',
@@ -23,6 +39,7 @@ export const en = {
     failedLetters: 'Failed letters',
     noFailedLetters: 'No mistakes yet',
     figureLabel: 'Hangman figure with {{errors}} of {{maxErrors}} errors',
+    elapsedTime: 'Time',
     helpTimer: 'Automatic hint in',
     seconds_one: '{{count}} second',
     seconds_other: '{{count}} seconds',

@@ -11,6 +11,7 @@ function createState(overrides: Partial<HangmanState> = {}): HangmanState {
     failedLetters: [],
     status: 'playing',
     remainingHelpSeconds: HANGMAN_CONFIG.helpIntervalSeconds,
+    elapsedSeconds: 0,
     ...overrides,
   };
 }

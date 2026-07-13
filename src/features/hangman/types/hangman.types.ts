@@ -15,9 +15,18 @@ export type HangmanState = {
   failedLetters: string[];
   status: GameStatus;
   remainingHelpSeconds: number;
+  elapsedSeconds: number;
 };
 
 export type GuessResult = {
   state: HangmanState;
   isCorrect: boolean;
+};
+
+export type LeaderboardEntry = {
+  id: string;
+  nickname: string;
+  timeSeconds: number;
+  completedAt: string;
+  word: string;
 };

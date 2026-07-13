@@ -14,5 +14,6 @@ export function createInitialGameState(random = Math.random): HangmanState {
     failedLetters: [],
     status: 'playing',
     remainingHelpSeconds: HANGMAN_CONFIG.helpIntervalSeconds,
+    elapsedSeconds: 0,
   };
 }

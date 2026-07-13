@@ -2,7 +2,23 @@ export const es = {
   app: {
     eyebrow: 'Juego premium',
     title: 'Adivina el nombre antes de que caiga el último trazo',
-    description: 'Una versión moderna, responsive y accesible del clásico ahorcado, construida con arquitectura profesional.',
+    description: 'Registrá tu nickname, resolvé el nombre lo más rápido posible y competí por el ranking local.',
+  },
+  start: {
+    eyebrow: 'Modo competitivo',
+    title: 'Entrá al desafío y marcá tu mejor tiempo',
+    description: 'Cada victoria registra tu tiempo en el ranking del dispositivo. Cuanto más rápido resuelvas, más alto quedás.',
+    nicknameLabel: 'Nickname',
+    nicknamePlaceholder: 'Ej: Nakto',
+    nicknameHelp: 'Usá entre {{min}} y {{max}} caracteres.',
+    nicknameError: 'Ingresá un nickname válido para empezar.',
+    startButton: 'Start game',
+  },
+  leaderboard: {
+    empty: 'Todavía no hay partidas ganadas. Sé la primera persona en entrar al ranking.',
+    eyebrow: 'Ranking local',
+    title: 'Mejores tiempos',
+    topLabel: 'TOP 10',
   },
   footer: {
     copyright: 'Construido con React, TypeScript y arquitectura profesional.',
@@ -23,6 +39,7 @@ export const es = {
     failedLetters: 'Letras fallidas',
     noFailedLetters: 'Sin errores todavía',
     figureLabel: 'Figura del ahorcado con {{errors}} de {{maxErrors}} errores',
+    elapsedTime: 'Tiempo',
     helpTimer: 'Ayuda automática en',
     seconds_one: '{{count}} segundo',
     seconds_other: '{{count}} segundos',

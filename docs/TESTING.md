@@ -11,6 +11,8 @@ Cubren lógica pura de dominio:
 - Inputs vacíos.
 - Victoria y derrota.
 - Ayuda automática sin recursión.
+- Sanitización de nickname.
+- Ordenamiento de ranking por menor tiempo.
 
 ```bash
 npm run test
@@ -21,6 +23,8 @@ npm run test
 Validan comportamiento de usuario:
 
 - Render inicial.
+- Pantalla de inicio.
+- Registro simple por nickname.
 - Cambio de idioma.
 - Escritura de letras.
 
