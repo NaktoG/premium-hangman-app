@@ -4,6 +4,11 @@ export const es = {
     title: 'Adivina el nombre antes de que caiga el último trazo',
     description: 'Una versión moderna, responsive y accesible del clásico ahorcado, construida con arquitectura profesional.',
   },
+  footer: {
+    copyright: 'Construido con React, TypeScript y arquitectura profesional.',
+    githubIconLabel: 'Icono de GitHub',
+    githubLink: 'Ver repositorio en GitHub',
+  },
   actions: {
     close: 'Cerrar',
     restart: 'Jugar de nuevo',

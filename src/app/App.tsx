@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Footer } from '@app/Footer';
 import { ErrorCounter } from '@features/hangman/components/ErrorCounter';
 import { GameBoard } from '@features/hangman/components/GameBoard';
 import { GameResultDialog } from '@features/hangman/components/GameResultDialog';
@@ -40,6 +41,7 @@ export function App() {
           </aside>
         </div>
       </section>
+      <Footer />
 
       <GameResultDialog status={game.status} word={game.originalWord} onRestart={game.restart} />
     </main>

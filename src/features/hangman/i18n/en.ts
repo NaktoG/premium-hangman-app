@@ -4,6 +4,11 @@ export const en = {
     title: 'Guess the name before the final stroke drops',
     description: 'A modern, responsive and accessible version of classic hangman, built with professional architecture.',
   },
+  footer: {
+    copyright: 'Built with React, TypeScript and professional architecture.',
+    githubIconLabel: 'GitHub icon',
+    githubLink: 'View repository on GitHub',
+  },
   actions: {
     close: 'Close',
     restart: 'Play again',

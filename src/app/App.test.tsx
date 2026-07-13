@@ -18,6 +18,10 @@ describe('App', () => {
 
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
     expect(screen.getByRole('group', { name: /tablero de letras/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /ver repositorio en github/i })).toHaveAttribute(
+      'href',
+      'https://github.com/NaktoG/premium-hangman-app',
+    );
   });
 
   it('allows switching language', async () => {
