@@ -1,0 +1,30 @@
+export const es = {
+  app: {
+    eyebrow: 'Juego premium',
+    title: 'Adivina el nombre antes de que caiga el último trazo',
+    description: 'Una versión moderna, responsive y accesible del clásico ahorcado, construida con arquitectura profesional.',
+  },
+  actions: {
+    close: 'Cerrar',
+    restart: 'Jugar de nuevo',
+    switchToSpanish: 'Cambiar a español',
+    switchToEnglish: 'Cambiar a inglés',
+  },
+  game: {
+    boardLabel: 'Tablero de letras',
+    characterLabel: 'Letra {{position}}',
+    correctLetter: 'Letra revelada',
+    errorCounter: 'Errores',
+    failedLetters: 'Letras fallidas',
+    noFailedLetters: 'Sin errores todavía',
+    figureLabel: 'Figura del ahorcado con {{errors}} de {{maxErrors}} errores',
+    helpTimer: 'Ayuda automática en',
+    seconds_one: '{{count}} segundo',
+    seconds_other: '{{count}} segundos',
+    separator: 'Separador de palabra',
+    winnerMessage: 'Ganaste. El nombre correcto era {{word}}.',
+    winnerTitle: 'Victoria impecable',
+    loserMessage: 'Perdiste. El nombre correcto era {{word}}.',
+    loserTitle: 'Partida terminada',
+  },
+};

@@ -1,0 +1,30 @@
+export const en = {
+  app: {
+    eyebrow: 'Premium game',
+    title: 'Guess the name before the final stroke drops',
+    description: 'A modern, responsive and accessible version of classic hangman, built with professional architecture.',
+  },
+  actions: {
+    close: 'Close',
+    restart: 'Play again',
+    switchToSpanish: 'Switch to Spanish',
+    switchToEnglish: 'Switch to English',
+  },
+  game: {
+    boardLabel: 'Letter board',
+    characterLabel: 'Letter {{position}}',
+    correctLetter: 'Revealed letter',
+    errorCounter: 'Errors',
+    failedLetters: 'Failed letters',
+    noFailedLetters: 'No mistakes yet',
+    figureLabel: 'Hangman figure with {{errors}} of {{maxErrors}} errors',
+    helpTimer: 'Automatic hint in',
+    seconds_one: '{{count}} second',
+    seconds_other: '{{count}} seconds',
+    separator: 'Word separator',
+    winnerMessage: 'You won. The correct name was {{word}}.',
+    winnerTitle: 'Flawless victory',
+    loserMessage: 'You lost. The correct name was {{word}}.',
+    loserTitle: 'Game over',
+  },
+};
