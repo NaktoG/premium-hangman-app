@@ -60,6 +60,12 @@ e2e/                      # Tests end-to-end
 
 ## Deploy En Netlify
 
+Producción:
+
+```txt
+https://premium-hangman-app.netlify.app
+```
+
 Configuración recomendada:
 
 ```txt

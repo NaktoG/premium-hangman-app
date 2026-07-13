@@ -4,6 +4,12 @@ La aplicación se despliega como sitio estático.
 
 ## Netlify
 
+Production URL:
+
+```txt
+https://premium-hangman-app.netlify.app
+```
+
 Configuración:
 
 ```txt
