@@ -35,13 +35,34 @@ Build command: npm run build
 Publish directory: dist
 ```
 
+## Vercel
+
+Production URL:
+
+```txt
+https://premium-hangman-app.vercel.app
+```
+
+Configuración en Vercel:
+
+| Setting | Value |
+|---|---|
+| Framework Preset | Vite |
+| Root Directory | `./` |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Install Command | `npm ci` |
+| Node.js | 18.x |
+
 ## Variables De Entorno
 
 No requiere variables de entorno para funcionar.
 
 ## Rollback
 
-Netlify permite volver a un deploy anterior desde su dashboard.
+Vercel permite volver a un deploy anterior desde su dashboard o ejecutar un redeploy de una versión previa.
+
+Netlify permite volver a un deploy anterior desde su dashboard (cuenta con créditos excedidos actualmente).
 
 ## Health Check Manual
 
