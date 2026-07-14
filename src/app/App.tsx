@@ -9,6 +9,7 @@ import { HangmanFigure } from '@features/hangman/components/HangmanFigure';
 import { HelpTimer } from '@features/hangman/components/HelpTimer';
 import { Leaderboard } from '@features/hangman/components/Leaderboard';
 import { LanguageSwitcher } from '@features/hangman/components/LanguageSwitcher';
+import { SoundToggle } from '@features/hangman/components/SoundToggle';
 import { StartScreen } from '@features/hangman/components/StartScreen';
 import { useHangmanGame } from '@features/hangman/hooks/useHangmanGame';
 import { getLeaderboard, saveWinningScore } from '@features/hangman/storage/leaderboardStorage';
@@ -95,6 +96,7 @@ export function App() {
       <Footer />
 
       <GameResultDialog status={game.status} word={game.originalWord} onRestart={handleRestart} />
+      <SoundToggle />
     </main>
   );
 }

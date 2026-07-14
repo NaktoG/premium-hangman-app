@@ -1,6 +1,8 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { GameStatus } from '@features/hangman/types/hangman.types';
+import { soundManager } from '@features/hangman/audio/soundManager';
+import { WinConfetti } from '@features/hangman/components/WinConfetti';
 import { Button } from '@shared/components/Button';
 import { Dialog } from '@shared/components/Dialog';
 
@@ -19,18 +21,26 @@ export function GameResultDialog({ onRestart, status, word }: GameResultDialogPr
   const message = status === 'won' ? t('game.winnerMessage', { word }) : t('game.loserMessage', { word });
   const handleClose = useCallback(() => onRestart(), [onRestart]);
 
+  useEffect(() => {
+    if (status === 'won') soundManager.play('win');
+    if (status === 'lost') soundManager.play('lose');
+  }, [status]);
+
   return (
-    <Dialog isOpen={isOpen} onClose={handleClose} titleId={DIALOG_TITLE_ID}>
-      <div className="text-center">
-        <p className="text-sm font-bold uppercase tracking-[0.35em] text-cyan-200">Premium Hangman</p>
-        <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl" id={DIALOG_TITLE_ID}>
-          {title}
-        </h2>
-        <p className="mt-4 text-lg leading-8 text-slate-300">{message}</p>
-        <Button className="mt-8 w-full sm:w-auto" onClick={onRestart} type="button">
-          {t('actions.restart')}
-        </Button>
-      </div>
-    </Dialog>
+    <>
+      <WinConfetti trigger={status === 'won'} />
+      <Dialog isOpen={isOpen} onClose={handleClose} titleId={DIALOG_TITLE_ID}>
+        <div className="text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.35em] text-cyan-200">Premium Hangman</p>
+          <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl" id={DIALOG_TITLE_ID}>
+            {title}
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-slate-300">{message}</p>
+          <Button className="mt-8 w-full sm:w-auto" onClick={onRestart} type="button">
+            {t('actions.restart')}
+          </Button>
+        </div>
+      </Dialog>
+    </>
   );
 }
