@@ -24,6 +24,18 @@ export const es = {
     githubIconLabel: 'Icono de GitHub',
     githubLink: 'Ver repositorio en GitHub',
   },
+  howToPlay: {
+    eyebrow: 'Cómo jugar',
+    title: 'Reglas del juego',
+    step1: 'Adiviná la palabra secreta letra por letra',
+    step2: 'Cada error acerca al ahorcado — tenés 6 intentos',
+    step3: 'Si te trabás, aparece una letra gratis cada 10 segundos',
+    step4: 'Resolvé lo más rápido posible para subir en el ranking',
+  },
+  sound: {
+    on: 'Sonido activado',
+    off: 'Sonido desactivado',
+  },
   actions: {
     close: 'Cerrar',
     restart: 'Jugar de nuevo',

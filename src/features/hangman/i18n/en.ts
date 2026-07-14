@@ -24,6 +24,18 @@ export const en = {
     githubIconLabel: 'GitHub icon',
     githubLink: 'View repository on GitHub',
   },
+  howToPlay: {
+    eyebrow: 'How to play',
+    title: 'Game rules',
+    step1: 'Guess the secret word letter by letter',
+    step2: 'Each mistake brings the hangman closer — you have 6 tries',
+    step3: 'If you get stuck, a free letter appears every 10 seconds',
+    step4: 'Solve it as fast as possible to climb the ranking',
+  },
+  sound: {
+    on: 'Sound on',
+    off: 'Sound off',
+  },
   actions: {
     close: 'Close',
     restart: 'Play again',

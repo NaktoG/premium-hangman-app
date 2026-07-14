@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HANGMAN_CONFIG } from '@features/hangman/config/hangman.config';
 import { isValidNickname, sanitizeNickname } from '@features/hangman/domain/player';
+import { HowToPlay } from '@features/hangman/components/HowToPlay';
 import { Leaderboard } from '@features/hangman/components/Leaderboard';
 import type { LeaderboardEntry } from '@features/hangman/types/hangman.types';
 import { Button } from '@shared/components/Button';
@@ -74,6 +75,10 @@ export function StartScreen({ leaderboard, onStart }: StartScreenProps) {
       </section>
 
       <Leaderboard entries={leaderboard} />
+
+      <div className="lg:col-span-2">
+        <HowToPlay />
+      </div>
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'motion/react';
+import { staggerContainer, boardItem } from '@features/hangman/animations/animationVariants';
 import { LetterInput } from '@features/hangman/components/LetterInput';
 import type { VisibleLetter } from '@features/hangman/types/hangman.types';
 
@@ -12,10 +14,19 @@ export function GameBoard({ disabled, letters, onGuess }: GameBoardProps) {
   const { t } = useTranslation();
 
   return (
-    <div aria-label={t('game.boardLabel')} className="flex flex-wrap justify-center gap-3 sm:gap-4" role="group">
+    <motion.div
+      aria-label={t('game.boardLabel')}
+      className="flex flex-wrap justify-center gap-3 sm:gap-4"
+      initial="hidden"
+      role="group"
+      variants={staggerContainer}
+      animate="visible"
+    >
       {letters.map((letter, index) => (
-        <LetterInput disabled={disabled} index={index} key={letter.id} letter={letter} onGuess={onGuess} />
+        <motion.div key={letter.id} variants={boardItem}>
+          <LetterInput disabled={disabled} index={index} letter={letter} onGuess={onGuess} />
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
