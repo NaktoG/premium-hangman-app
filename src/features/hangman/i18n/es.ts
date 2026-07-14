@@ -39,6 +39,7 @@ export const es = {
   actions: {
     close: 'Cerrar',
     restart: 'Jugar de nuevo',
+    backToStart: 'Salir del juego',
     switchToSpanish: 'Cambiar a español',
     switchToEnglish: 'Cambiar a inglés',
   },

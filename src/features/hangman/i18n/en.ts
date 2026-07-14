@@ -39,6 +39,7 @@ export const en = {
   actions: {
     close: 'Close',
     restart: 'Play again',
+    backToStart: 'Exit game',
     switchToSpanish: 'Switch to Spanish',
     switchToEnglish: 'Switch to English',
   },

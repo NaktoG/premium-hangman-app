@@ -52,6 +52,12 @@ export function App() {
     game.restart();
   }
 
+  function handleBackToStart() {
+    recordedWinKeyRef.current = null;
+    game.restart();
+    setScreen('start');
+  }
+
   return (
     <main className="min-h-dvh overflow-hidden bg-slate-950 text-white">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.28),_transparent_34%),radial-gradient(circle_at_85%_20%,_rgba(168,85,247,0.24),_transparent_30%),linear-gradient(135deg,_#020617_0%,_#0f172a_48%,_#111827_100%)]" />
@@ -68,7 +74,18 @@ export function App() {
           ) : (
             <div aria-hidden="true" />
           )}
-          <LanguageSwitcher />
+          <div className="flex items-center gap-3">
+            {screen === 'game' && (
+              <button
+                className="rounded-xl border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-slate-300 backdrop-blur-md transition hover:bg-white/10 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-cyan-400"
+                onClick={handleBackToStart}
+                type="button"
+              >
+                {t('actions.backToStart')}
+              </button>
+            )}
+            <LanguageSwitcher />
+          </div>
         </header>
 
         {screen === 'start' ? (
