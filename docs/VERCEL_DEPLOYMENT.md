@@ -6,9 +6,9 @@
 
 ## Estado
 
-- [ ] Preview desplegada
-- [ ] Producción desplegada
-- [ ] Variables configuradas
+- [x] Preview desplegada
+- [x] Producción desplegada
+- [x] Variables configuradas
 - [ ] Dominio configurado
 - [x] Pruebas completadas
 
@@ -23,6 +23,12 @@
 | Output Directory | `dist` |
 | Node.js | `>=18.20.0` |
 | Gestor de paquetes | npm |
+
+## URL de Producción
+
+```txt
+https://premium-hangman-app.vercel.app
+```
 
 ## Variables de entorno
 
@@ -55,6 +61,12 @@ Resultado: instalación, lint, typecheck, tests unitarios/UI y build completados
 ## Rollback
 
 Revertir la Pull Request de migración o volver al despliegue estático anterior publicado en GitHub Pages/Netlify.
+
+Para rollback desde CLI:
+
+```bash
+vercel rollback
+```
 
 ## Última revisión
 

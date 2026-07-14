@@ -19,7 +19,7 @@
 
 ## Descripción
 
-Juego del ahorcado premium, responsive y bilingüe construido con React, Vite y TypeScript. El proyecto reemplaza una implementación Angular inicial por una arquitectura frontend moderna, testeable y preparada para despliegue estático en Netlify.
+Juego del ahorcado premium, responsive y bilingüe construido con React, Vite y TypeScript. El proyecto reemplaza una implementación Angular inicial por una arquitectura frontend moderna, testeable y preparada para despliegue estático.
 
 ## Objetivo
 
@@ -148,6 +148,8 @@ Nota: la cuenta Netlify actual bloqueó nuevos deploys por créditos excedidos.
 - [Arquitectura](docs/ARCHITECTURE.md)
 - [Testing](docs/TESTING.md)
 - [Deploy](docs/DEPLOYMENT.md)
+- [Vercel Audit](docs/VERCEL_AUDIT.md)
+- [Vercel Deploy](docs/VERCEL_DEPLOYMENT.md)
 - [Contribución](docs/CONTRIBUTING.md)
 - [Flujo del juego](docs/diagrams/game-flow.md)
 - [Arquitectura visual](docs/diagrams/architecture.md)
