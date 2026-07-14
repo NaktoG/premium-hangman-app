@@ -27,7 +27,7 @@ export const es = {
   howToPlay: {
     eyebrow: 'Cómo jugar',
     title: 'Reglas del juego',
-    step1: 'Adiviná la palabra secreta letra por letra',
+    step1: 'Adiviná el nombre de persona letra por letra',
     step2: 'Cada error acerca al ahorcado — tenés 6 intentos',
     step3: 'Si te trabás, aparece una letra gratis cada 10 segundos',
     step4: 'Resolvé lo más rápido posible para subir en el ranking',
