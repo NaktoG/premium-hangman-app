@@ -11,6 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222?logo=github&logoColor=white)](https://naktog.github.io/premium-hangman-app/)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://premium-hangman-app.vercel.app)
 
 </div>
 
@@ -40,9 +41,11 @@ Ofrecer una experiencia de juego cuidada en español e inglés, con pantalla ini
 
 ## Demo
 
-**Preview actualizado:** [naktog.github.io/premium-hangman-app](https://naktog.github.io/premium-hangman-app/)
+**Vercel:** [premium-hangman-app.vercel.app](https://premium-hangman-app.vercel.app)
 
-**Netlify:** [premium-hangman-app.netlify.app](https://premium-hangman-app.netlify.app)
+**GitHub Pages:** [naktog.github.io/premium-hangman-app](https://naktog.github.io/premium-hangman-app/)
+
+**Netlify (inactivo):** [premium-hangman-app.netlify.app](https://premium-hangman-app.netlify.app)
 
 ## Stack tecnológico
 
@@ -55,7 +58,7 @@ Ofrecer una experiencia de juego cuidada en español e inglés, con pantalla ini
 | i18n | i18next / react-i18next |
 | Tests unitarios/UI | Vitest + Testing Library |
 | Tests E2E | Playwright |
-| Deploy | Netlify |
+| Deploy | Vercel |
 
 ## Persistencia local
 
@@ -108,15 +111,23 @@ docs/                     # Arquitectura, ADRs, diagramas y guías
 e2e/                      # Tests end-to-end
 ```
 
-## Deploy En Netlify
+## Deploy En Vercel
 
 Producción:
 
 ```txt
-https://premium-hangman-app.netlify.app
+https://premium-hangman-app.vercel.app
 ```
 
-Nota: la cuenta Netlify actual bloqueó nuevos deploys por créditos excedidos. La versión actualizada se publica también en GitHub Pages.
+Configuración:
+
+```txt
+Framework Preset: Vite
+Root Directory: ./
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm ci
+```
 
 ## Deploy En GitHub Pages
 
@@ -124,12 +135,13 @@ Nota: la cuenta Netlify actual bloqueó nuevos deploys por créditos excedidos. 
 https://naktog.github.io/premium-hangman-app/
 ```
 
-Configuración recomendada:
+## Deploy En Netlify
 
 ```txt
-Build command: npm run build
-Publish directory: dist
+https://premium-hangman-app.netlify.app
 ```
+
+Nota: la cuenta Netlify actual bloqueó nuevos deploys por créditos excedidos.
 
 ## Documentación
 
